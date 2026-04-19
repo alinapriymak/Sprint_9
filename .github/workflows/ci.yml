@@ -3,9 +3,7 @@ name: CI/CD Pipeline for Foodgram Tests
 on:
   push:
     branches: [ main, master, develop ]
-  pull_request:
-    branches: [ main, master ]
-  workflow_dispatch:
+  
 
 jobs:
   test:
@@ -29,10 +27,13 @@ jobs:
       - name: Create assets directory
         run: mkdir -p assets
       
+      - name: Pull Chrome image
+        run: docker pull selenoid/chrome:128.0
+      
       - name: Start Selenoid with Docker Compose
         run: |
           docker compose up -d
-          sleep 10
+          sleep 15
       
       - name: Check Selenoid status
         run: curl http://localhost:4444/status
@@ -70,4 +71,3 @@ jobs:
       - name: Stop Selenoid
         if: always()
         run: docker compose down
-        
