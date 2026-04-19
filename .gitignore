@@ -34,11 +34,6 @@ htmlcov/
 coverage.xml
 *.cover
 
-# Selenium
-screenshots/
-*.png
-*.jpg
-
 # IDE
 .vscode/
 .idea/
