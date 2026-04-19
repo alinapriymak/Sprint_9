@@ -59,9 +59,9 @@ def test_recipe_data():
 @pytest.fixture(scope="function")
 def test_image_path():
     """Фикстура с путем к тестовому изображению"""
-    # project_root = Path(__file__).parent.parent
-    # image_path = project_root / "assets" / "manul.jpg"
-    image_path = Path("/Users/alinaprijmak/Sprint_9/assets/manul.jpg")
+    project_root = Path(__file__).parent
+    image_path = project_root / "assets" / "manul.jpg"
+    #image_path = Path("/Users/alinaprijmak/Sprint_9/assets/manul.jpg")
     
     # Проверяем, существует ли файл
     if not image_path.exists():
