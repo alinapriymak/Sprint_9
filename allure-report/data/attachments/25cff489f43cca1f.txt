@@ -1,0 +1,2 @@
+1. URL after registration: https://foodgram-frontend-1.prakticum-team.ru/signin
+5. Clicked login button

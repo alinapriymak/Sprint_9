@@ -1,0 +1,2 @@
+Image path: /Users/alinaprijmak/Sprint_9/assets/manul.jpg
+Found by XPATH
